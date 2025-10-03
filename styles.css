@@ -1,65 +1,111 @@
+/* New professional theme: Clean, Modern, High-Contrast */
+
+:root {
+    /* Define color variables for easy changes later */
+    --primary-color: #007bff; /* A standard blue for actions/buttons */
+    --secondary-color: #28a745; /* Green for profit results */
+    --background-color: #f8f9fa; /* Very light gray */
+    --card-background: #ffffff; /* Pure white for the container */
+    --text-color: #343a40; /* Dark gray for main text */
+    --border-color: #ced4da; /* Light gray for borders */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    color: var(--text-color);
 }
 
 .container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    background: var(--card-background);
+    padding: 40px; /* Slightly larger padding */
+    border-radius: 12px; /* Smoother corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+    width: 400px; /* Slightly wider */
+    max-width: 90%;
     text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1.05em;
+    color: #6c757d; /* Lighter color for description text */
 }
 
 label {
     display: block;
     text-align: left;
     margin-top: 15px;
-    font-weight: bold;
+    margin-bottom: 5px;
+    font-weight: 600; /* Bolder label text */
+    font-size: 0.95em;
 }
 
 input[type="number"] {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Makes padding included in the width */
+    border: 1px solid var(--border-color);
+    border-radius: 8px; /* Rounded input fields */
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: var(--primary-color); /* Highlight on focus */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
 }
 
 button {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.1em;
+    font-weight: bold;
     width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-1px); /* Slight lift on hover */
 }
 
 hr {
-    margin: 20px 0;
+    margin: 30px 0;
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 2px solid var(--border-color); /* Thicker, defined separator */
 }
 
-p#result-selling-price, p#result-total-profit {
+h2 {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p#result-selling-price, p#result-final-price, p#result-total-profit {
     font-size: 1.1em;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 strong {
-    color: #28a745; /* A nice green color for emphasis */
-    font-size: 1.2em;
+    color: var(--secondary-color); /* Green for positive results (profit) */
+    font-size: 1.25em;
+    font-weight: 700;
 }
