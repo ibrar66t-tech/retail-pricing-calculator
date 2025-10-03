@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profit Margin & Pricing Calculator</title>
+    <title>Advanced Profit & Pricing Calculator</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <div class="container">
-        <h1>Retail Pricing Calculator</h1>
-        <p>Determine your product's selling price to meet your profit goals.</p>
+        <h1>Advanced Retail Pricing Calculator</h1>
+        <p>Determine your price and total profit, including taxes.</p>
         
         <label for="cost">Product Cost (What you pay):</label>
         <input type="number" id="cost" value="25.00" step="0.01">
@@ -20,12 +20,16 @@
         <label for="shipping">Shipping/Handling Cost (What you pay):</label>
         <input type="number" id="shipping" value="5.00" step="0.01">
         
-        <button onclick="calculateProfitPrice()">Calculate Selling Price</button>
+        <label for="tax">Sales Tax Percentage (%):</label>
+        <input type="number" id="tax" value="8" step="0.1">
+        
+        <button onclick="calculateAdvancedProfit()">Calculate Selling Price</button> 
         
         <hr>
         
         <h2>Results:</h2>
-        <p id="result-selling-price">Recommended Selling Price: **$0.00**</p>
+        <p id="result-selling-price">Recommended Price **(Before Tax)**: **$0.00**</p>
+        <p id="result-final-price">Final Customer Price **(Total)**: **$0.00**</p>
         <p id="result-total-profit">Your Total Profit per Sale: **$0.00**</p>
     </div>
     
